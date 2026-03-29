@@ -14,7 +14,10 @@ const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
+
         const users = getUsers();
+        console.log("Stored users:", users); // 👈 ADD THIS
+
         const user = users.find((u) => u.username === username);
 
         if (!user) {
